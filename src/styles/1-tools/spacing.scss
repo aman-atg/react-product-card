@@ -1,0 +1,15 @@
+/* Returns default space if no argument is passed else default space + argument */
+@function space($x: 0rem) {
+  @return calc(#{$x} + #{$default-space});
+}
+
+@mixin no-gutter {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin test-space {
+  position: absolute;
+  top: 25%;
+  right: 50%;
+}

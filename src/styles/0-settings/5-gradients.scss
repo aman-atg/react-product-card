@@ -1,0 +1,21 @@
+// GRADIENTS
+
+@mixin linear-gradient($direction, $colors...) {
+  background-image: linear-gradient($direction, $colors...);
+}
+
+/*
+@mixin gradient-green {
+  @include linear-gradient($primary-green, $blue);
+}
+
+@mixin gradient-orange {
+  @include linear-gradient($primary-yellow, $orange);
+}
+
+*/
+
+/*
+  ! Create gradients here for your site
+
+*/

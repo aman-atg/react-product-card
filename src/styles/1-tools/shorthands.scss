@@ -1,0 +1,27 @@
+// ! EXPORTED to 0-settings/_index.scss
+
+// FUNCTIONS
+// map get func
+@function m-g($map, $key) {
+  @return map-get($map, $key);
+}
+
+// MIXINS
+//
+@mixin getFont($font: null, $weight: null) {
+  @if ($font != null) {
+    font-family: m-g($fonts, $font);
+  }
+
+  @if ($weight != null) {
+    font-weight: m-g($font-weights, $weight);
+  }
+}
+
+@mixin bg($color: null) {
+  @if ($color != null) {
+    background: $color;
+  }
+}
+
+// if required create list.shorthand.scss like files and import these files here

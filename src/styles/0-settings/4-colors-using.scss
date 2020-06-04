@@ -1,0 +1,52 @@
+@use "sass:color";
+@use '../1-tools/colors'; // haven't done anything in this file yet
+
+// Primary
+$primary-green: $green1;
+
+// Secondary
+$secondary-green: $green2;
+
+// Neutral
+$neutral-green: $green3;
+$black: #212121;
+
+// Others
+$bg: #242526;
+$bg-accent: #484a4d;
+$text-color: #dadce1;
+$orange-btn: #ff9f33;
+$disabled: #c1c1c1;
+
+// Experimental Colors (darker/lighter/orSomething)
+$light-green: lighten($primary-green, 32%);
+$dark-green: darken($primary-green, 32%);
+
+/*
+@mixin testing-colors {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 250px;
+  margin-bottom: 5px;
+}
+.aman1,
+.aman2 {
+  @include testing-colors();
+  background: $green1;
+}
+*/
+
+/*
+! Useful functions :- darken , lighten , saturate , desaturate , color.scale , color.adjust , color.mix
+! Create Custom functions and mixins in 1-tools folder and just comment those func/mixin names (keeping it handy)
+! Create Your Plates(3 to 6 similar colors with diff traits) from choosing required colors from 3-colors.scss
+Naming can be :- using-green1 , using-green2, using-red1, using-gray2 ...etc Or just give Useful names like hot-pink, primary-green, brand-color etc..
+
+    two possible ways for themeing ->
+    1st use if condition and import required colors-using file
+    2nd use advance technique like lighten , darken , hue etc
+
+*/

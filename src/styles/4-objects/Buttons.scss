@@ -1,0 +1,22 @@
+@mixin btn($font: null, $weight: null, $bgColor: null) {
+  cursor: pointer;
+  display: inline-block; // for anchor
+  @include getFont($font, $weight);
+  @include bg($bgColor);
+}
+
+@mixin btn-disabled {
+  opacity: 0.8;
+  background: $disabled;
+  color: #fff;
+  border: unset;
+
+  &:hover {
+    box-shadow: unset;
+    background: $disabled;
+  }
+}
+
+// CREATE UNSTYLED PIECES HERE
+// THEN ADD STYLING IN COMPONENTS
+// USE THESE IN A SEPARATE STYLESHEET IN LAST (THAT MAY VARY WITH DIFF PROJECT)

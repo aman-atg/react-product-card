@@ -1,0 +1,38 @@
+@use "sass:map";
+// ======= TYPOGRAPHY =======
+
+// FONTS
+$font-1: "Open Sans";
+$font-2: "Sans-serif";
+$font-3: "Times New Roman";
+$font-4: "Georgia";
+
+// CHOSEN ONES
+$fonts: (
+  "heading": $font-1,
+  "para": $font-2,
+  "other": $font-3,
+);
+
+// Weights
+$font-weights: (
+  "light": 200,
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+  "extra-bold": 900,
+);
+
+/* testing
+
+body {
+  // pass it with variable name if you want to use just that one
+  @include getFont();
+}
+
+*/
+
+/*
+  ! Note :- Can use variable Fonts + if possible then import fonts with conditions like if body-font == ThisFont 
+  !         then only import
+*/

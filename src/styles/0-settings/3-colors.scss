@@ -1,0 +1,28 @@
+// ======= COLORS =======
+
+$blue1: hsl(210, 66, 55);
+$blue2: hsl(210, 55, 53);
+$blue3: hsl(210, 20, 50);
+
+$red1: hsl(0, 75, 66);
+$red2: hsl(9, 100, 60);
+$red3: hsl(9, 20, 50);
+
+$green1: hsl(120, 70, 64);
+$green2: hsl(120, 43, 55);
+$green3: hsl(115, 20, 50);
+
+/*
+ ! Note ->  Collect some good and unique colors and then use darken , grayscale etc on them in colors-using 
+ !          with senseful names like dark-green , etc-green
+
+hsl -> hue , saturation , lightness
+hue means color
+Saturation means how much of that color
+lightness == brightness
+(
+  hue = 0 to 360deg (chooses color)
+  100% is full saturation, and 0% is a shade of gray
+  100% lightness is white, 0% lightness is black, and 50% lightness is “normal”
+)
+*/

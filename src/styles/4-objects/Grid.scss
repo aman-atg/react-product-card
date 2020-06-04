@@ -1,0 +1,227 @@
+// ! NEED TO WORK HERE
+
+@mixin container-flexed {
+  display: flex;
+  // align-items: center;
+  justify-content: space-between;
+}
+// NEW GRID CONTAINER
+@mixin grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+@mixin container($width: 0, $multiplier: 0) {
+  margin: 0 auto;
+  padding: 0 $default-space * $multiplier;
+
+  // DO I NEED SOMETHING HERE, RELATED TO LAYOUT ? LIKE GRID
+  @if ($width != 0) {
+    max-width: $width;
+  } @else {
+    width: 100%;
+  }
+}
+
+@mixin make-col($size: $grid-columns, $columns: $grid-columns) {
+  flex: 0 0 auto;
+  width: percentage($size / $columns);
+  padding: {
+    left: $default-space;
+    right: $default-space;
+  }
+}
+
+@mixin make-col-mobile($size: $grid-columns, $colmns: $grid-columns) {
+  @if ($size>0) {
+    @media #{$mobile-up-query} {
+      width: percentage($size / $columns);
+    }
+  }
+}
+@mixin make-col-tablet($size: $grid-columns, $colmns: $grid-columns) {
+  @if ($size>0) {
+    @media #{$tablet-up-query} {
+      width: percentage($size / $columns);
+    }
+  }
+}
+@mixin make-col-desktop($size: $grid-columns, $colmns: $grid-columns) {
+  @if ($size>0) {
+    @media #{$desktop-up-query} {
+      width: percentage($size / $columns);
+    }
+  }
+}
+@mixin make-col-big-desktop($size: $grid-columns, $colmns: $grid-columns) {
+  @if ($size>0) {
+    @media #{$big-desktop-up-query} {
+      width: percentage($size / $columns);
+    }
+  }
+}
+
+@mixin full-col($sm: 12, $md: $sm, $lg: $md, $xl: $lg) {
+  @include make-col-mobile($sm);
+  @include make-col-tablet($md);
+  @include make-col-desktop($lg);
+  @include make-col-big-desktop($xl);
+  flex: 0 0 auto;
+  padding: {
+    left: $default-space;
+    right: $default-space;
+  }
+}
+
+// CREATING DEFAULT CLASSES col-1 to col-12
+@for $x from 1 to 13 {
+  .col-#{$x} {
+    @include make-col($x);
+  }
+}
+
+@mixin row {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: {
+    left: (-1 * $default-space / 2);
+    right: (-1 * $default-space / 2);
+  }
+}
+
+// ==================== TESTING-BELOW==========================
+
+// REUSABLE CLASSES WITH LESS OR MORE STYLES ARE EFFIENT //LIKE ma , m-5, m-2
+
+// Eg.
+@for $n from 1 to 6 {
+  .m-#{$n} {
+    margin: $default-space * $n/2;
+  }
+  .p-#{$n} {
+    padding: $default-space * $n/2;
+  }
+}
+
+.no-space {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@mixin reset-offset {
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+
+// @mixin grid-classes($size, $i, $perc) {
+// &.offset-#{$size}#{$i} {
+// margin-left: $perc;
+// }
+// &.pull-#{$size}#{$i} {
+// right: $perc;
+// }
+// &.push-#{$size}#{$i} {
+// left: $perc;
+// }
+// }
+
+// .column {
+// box-sizing: border-box;
+// padding: 0 $default-space / 2;
+// min-height: 1px;
+// float: left;
+//
+// $i: 1;
+// @while $i <= $columns {
+// $perc: unquote((100 / ($columns / $i)) + "%");
+//
+// &.small-#{$i} {
+// width: $perc;
+// @include reset-offset;
+// }
+//
+// $i: $i + 1;
+// }
+//
+// @media #{$desktop-query} {
+// $i: 1;
+//
+// @while $i <= $columns {
+// $perc: unquote((100 / ($columns / $i)) + "%");
+//
+// &.medium-#{$i} {
+// width: $perc;
+// @include reset-offset;
+// }
+//
+// $i: $i + 1;
+// }
+// }
+//
+// @media #{$desktop-query} {
+// $i: 1;
+//
+// @while $i <= $columns {
+// $perc: unquote((100 / ($columns / $i)) + "%");
+//
+// &.large-#{$i} {
+// width: $perc;
+// @include reset-offset;
+// }
+//
+// $i: $i + 1;
+// }
+// }
+//
+// @media #{$desktop-query} {
+// $i: 1;
+//
+// @while $i <= $columns {
+// $perc: unquote((100 / ($columns / $i)) + "%");
+//
+// &.xlarge-#{$i} {
+// width: $perc;
+// @include reset-offset;
+// }
+//
+// $i: $i + 1;
+// }
+// }
+// }
+// }
+//
+
+@mixin hide($sm: 0, $md: 0, $lg: 0, $xl: 0) {
+  //default
+  @if ($sm == 0 and $md == 0 and $lg == 0 and $xl == 0) {
+    display: none;
+  }
+  @if ($sm==1) {
+    @media #{$mobile-down-query} {
+      display: none;
+    }
+  }
+  @if ($md==1) {
+    @media #{tablet-down-query} {
+      display: none;
+    }
+  }
+  @if ($lg==1) {
+    @media #{desktop-down-query} {
+      display: none;
+    }
+  }
+  @if ($xl==1) {
+    @media #{big-desktop-down-query} {
+      display: none;
+    }
+  }
+}
