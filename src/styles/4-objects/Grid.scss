@@ -5,6 +5,9 @@
   // align-items: center;
   justify-content: space-between;
 }
+
+// container with right-left margins +
+// container with Grid and variables for repeat(auto-fill,minmax(x,y));
 // NEW GRID CONTAINER
 @mixin grid-container {
   display: grid;
