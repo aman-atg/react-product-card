@@ -19,3 +19,7 @@
 - So this can be (i hope) mostly auto generated using cli-tools
 
 * NEED A FRONT PAGE AS DOCUMENTATION + PRESENTATION FOR THIS BP
+
+- CURRENT TASKS
+
+* A way to create similar redux structure using cli
