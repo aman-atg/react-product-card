@@ -1,9 +1,8 @@
-// ! NEED TO WORK HERE
-
-@mixin container-flexed {
-  display: flex;
-  // align-items: center;
-  justify-content: space-between;
+// can have different minmax depending upon media-query
+// like for mobile value minmax(min is half,max is full)
+// for desktop minmax(min is one-fourth, max is one-third) etc...
+@mixin gtc-rm($min: 1fr, $max: $min) {
+  grid-template-columns: repeat(auto-fill, minmax($min, $max));
 }
 
 // container with right-left margins +
