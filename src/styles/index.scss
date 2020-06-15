@@ -316,3 +316,32 @@ body {
     }
   }
 }
+
+@media (max-width: 1070px) {
+  .shoe {
+    width: 135%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .card {
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 0 0 35px 1px rgba(0, 0, 0, 0.2);
+    & > div {
+      width: 100%;
+      box-shadow: none;
+    }
+
+    .shoe {
+      width: 100%;
+      transform: rotate(-5deg) translateY(-50%);
+      top: 55%;
+      right: 2%;
+    }
+    .nike {
+      top: 20%;
+      left: 5%;
+    }
+  }
+}

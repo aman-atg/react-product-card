@@ -298,4 +298,31 @@ body {
   margin-right: 1px;
 }
 
+@media (max-width: 1070px) {
+  .shoe {
+    width: 135%;
+  }
+}
+@media (max-width: 1000px) {
+  .card {
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 0 0 35px 1px rgba(0, 0, 0, 0.2);
+  }
+  .card > div {
+    width: 100%;
+    box-shadow: none;
+  }
+  .card .shoe {
+    width: 100%;
+    transform: rotate(-5deg) translateY(-50%);
+    top: 55%;
+    right: 2%;
+  }
+  .card .nike {
+    top: 20%;
+    left: 5%;
+  }
+}
+
 /*# sourceMappingURL=index.css.map */
