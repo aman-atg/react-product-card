@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+:root {
+  --primary: #2175f5;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -61,29 +65,37 @@ body {
   z-index: -2;
 }
 
+.display {
+  z-index: 0;
+  animation: 1s width ease;
+}
+
+@keyframes width {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
 .gradient[color=blue] {
   background-image: linear-gradient(45deg, #0136af, #22abfa);
-  z-index: 0;
 }
 
 .gradient[color=red] {
   background-image: linear-gradient(45deg, #d62926, #ee625f);
-  z-index: 0;
 }
 
 .gradient[color=green] {
   background-image: linear-gradient(45deg, #11998e, #1ce669);
-  z-index: 0;
 }
 
 .gradient[color=orange] {
   background-image: linear-gradient(45deg, #fc4a1a, #f7b733);
-  z-index: 0;
 }
 
 .gradient[color=black] {
   background-image: linear-gradient(45deg, #111, #666);
-  z-index: 0;
 }
 
 .logo {
@@ -106,7 +118,7 @@ body {
   border-radius: 50%;
   font-size: 1.3rem;
   text-decoration: none;
-  color: #2175f5;
+  color: var(--primary);
   transition: 0.5s;
 }
 .share:hover {
@@ -152,7 +164,7 @@ body {
   line-height: 1;
 }
 .info .shoeName div .new {
-  background: #2175f5;
+  background: var(--primary);
   text-transform: uppercase;
   color: #fff;
   padding: 3px 10px;
@@ -242,7 +254,7 @@ body {
   font-size: 1.1rem;
 }
 .info .size-container .sizes .size.active {
-  background: #2175f5;
+  background: var(--primary);
   color: white;
 }
 .info .buy-price {
@@ -253,7 +265,7 @@ body {
 }
 .info .buy-price .buy {
   padding: 0.7rem 1rem;
-  background: #2175f5;
+  background: var(--primary);
   text-decoration: none;
   font-size: 1.1rem;
   color: white;

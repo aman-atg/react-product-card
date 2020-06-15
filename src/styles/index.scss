@@ -2,7 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
 // VARIABLES
-$primary: #2175f5;
+:root {
+  --primary: #2175f5;
+}
 
 $blue-gradient: linear-gradient(45deg, #0136af, #22abfa);
 $red-gradient: linear-gradient(45deg, #d62926, #ee625f);
@@ -83,10 +85,22 @@ body {
   z-index: -2;
 }
 
+.display {
+  z-index: 0;
+  animation: 1s width ease;
+}
+@keyframes width {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 @each $color, $gradient in $gradientBgs {
   .gradient[color="#{$color}"] {
     background-image: $gradient;
-    z-index: 0;
   }
 }
 
@@ -110,7 +124,7 @@ body {
   border-radius: 50%;
   font-size: 1.3rem;
   text-decoration: none;
-  color: $primary;
+  color: var(--primary);
   transition: 0.5s;
   &:hover {
     transform: scale(1.1);
@@ -156,7 +170,7 @@ body {
         line-height: 1;
       }
       .new {
-        background: $primary;
+        background: var(--primary);
         text-transform: uppercase;
         color: #fff;
         padding: 3px 10px;
@@ -256,7 +270,7 @@ body {
         font-size: 1.1rem;
 
         &.active {
-          background: $primary;
+          background: var(--primary);
           color: white;
         }
       }
@@ -269,7 +283,7 @@ body {
     align-items: center;
     .buy {
       padding: 0.7rem 1rem;
-      background: $primary;
+      background: var(--primary);
       text-decoration: none;
       font-size: 1.1rem;
       color: white;
