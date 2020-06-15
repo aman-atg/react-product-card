@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+
 import logo from "../assets/img/logo.png";
 import blue from "../assets/img/blue.png";
 import black from "../assets/img/black.png";
@@ -7,6 +8,18 @@ import red from "../assets/img/red.png";
 import orange from "../assets/img/orange.png";
 
 const Home = () => {
+  var sizes;
+
+  function changeSize() {
+    sizes.forEach(size => size.classList.remove("active"));
+    this.classList.add("active");
+  }
+  useEffect(() => {
+    sizes = document.querySelectorAll(".size");
+    sizes.forEach(size => size.addEventListener("click", changeSize));
+    console.log(sizes);
+  }, []);
+
   return (
     <div className="Home">
       <div className="container">
