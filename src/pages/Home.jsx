@@ -8,14 +8,34 @@ import red from "../assets/img/red.png";
 import orange from "../assets/img/orange.png";
 
 const Home = () => {
-  var sizes;
-
+  var sizes, colors, shoes;
   function changeSize() {
     sizes.forEach(size => size.classList.remove("active"));
     this.classList.add("active");
   }
+  function changeColor() {
+    var primary = this.getAttribute("primary");
+    var color = this.getAttribute("color");
+    var shoe = document.querySelector(`.shoe[color="${color}"]`);
+
+    // showing correct color
+    colors.forEach(color => color.classList.remove("active"));
+    this.classList.add("active");
+
+    // changing primary css variable
+    document.documentElement.style.setProperty("--primary", primary);
+
+    // showing correct img
+    shoes.forEach(s => s.classList.remove("show"));
+    shoe.classList.add("show");
+  }
+
   useEffect(() => {
     sizes = document.querySelectorAll(".size");
+    colors = document.querySelectorAll(".color");
+    shoes = document.querySelectorAll(".shoe");
+
+    colors.forEach(color => color.addEventListener("click", changeColor));
     sizes.forEach(size => size.addEventListener("click", changeSize));
     console.log(sizes);
   }, []);
@@ -27,7 +47,7 @@ const Home = () => {
           <div className="shoeBackground">
             {/* Gradients */}
             <div className="gradients">
-              <div className="gradient" color="blue"></div>
+              <div className="gradient display" color="blue"></div>
               <div className="gradient" color="red"></div>
               <div className="gradient" color="green"></div>
               <div className="gradient" color="orange"></div>
@@ -42,7 +62,12 @@ const Home = () => {
             </a>
 
             {/* Product Images */}
-            <img src={blue} alt="blue shoe" className="shoe" color="blue" />
+            <img
+              src={blue}
+              alt="blue shoe"
+              className="shoe show"
+              color="blue"
+            />
             <img src={red} alt="red shoe" className="shoe" color="red" />
             <img src={green} alt="green shoe" className="shoe" color="green" />
             <img
@@ -51,12 +76,7 @@ const Home = () => {
               className="shoe"
               color="orange"
             />
-            <img
-              src={black}
-              alt="black shoe"
-              className="shoe show"
-              color="black"
-            />
+            <img src={black} alt="black shoe" className="shoe " color="black" />
           </div>
 
           <div className="info">
