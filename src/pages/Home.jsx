@@ -12,19 +12,23 @@ const Home = () => {
       <div className="container">
         <div className="card">
           <div className="shoeBackground">
+            {/* Gradients */}
             <div className="gradients">
-              <div className="gradient" class="blue"></div>
-              <div className="gradient" class="red"></div>
-              <div className="gradient" class="green"></div>
-              <div className="gradient" class="orange"></div>
-              <div className="gradient" class="black"></div>
+              <div className="gradient" color="blue"></div>
+              <div className="gradient" color="red"></div>
+              <div className="gradient" color="green"></div>
+              <div className="gradient" color="orange"></div>
+              <div className="gradient" color="black"></div>
             </div>
+
             <h1 className="nike">nike</h1>
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="logo" className="logo" />
+
             <a href="#" className="share">
               <i className="fas fa-share-alt"></i>
             </a>
 
+            {/* Product Images */}
             <img src={blue} alt="blue shoe" className="shoe" color="blue" />
             <img src={red} alt="red shoe" className="shoe" color="red" />
             <img src={green} alt="green shoe" className="shoe" color="green" />
