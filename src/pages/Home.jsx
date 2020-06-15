@@ -46,51 +46,51 @@ const Home = () => {
             />
           </div>
 
-          <div class="info">
-            <div class="shoeName">
+          <div className="info">
+            <div className="shoeName">
               <div>
-                <h1 class="big">Nike Zoom KD 12</h1>
-                <span class="new">new</span>
+                <h1 className="big">Nike Zoom KD 12</h1>
+                <span className="new">new</span>
               </div>
-              <h3 class="small">Men's running shoes</h3>
+              <h3 className="small">Men's running shoes</h3>
             </div>
-            <div class="description">
-              <h3 class="title">Product Info</h3>
-              <p class="text">
+            <div className="description">
+              <h3 className="title">Product Info</h3>
+              <p className="text">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's.
               </p>
             </div>
-            <div class="color-container">
-              <h3 class="title">Color</h3>
-              <div class="colors">
+            <div className="color-container">
+              <h3 className="title">Color</h3>
+              <div className="colors">
                 <span
-                  class="color active"
+                  className="color active"
                   primary="#2175f5"
                   color="blue"
                 ></span>
-                <span class="color" primary="#f84848" color="red"></span>
-                <span class="color" primary="#29b864" color="green"></span>
-                <span class="color" primary="#ff5521" color="orange"></span>
-                <span class="color" primary="#444" color="black"></span>
+                <span className="color" primary="#f84848" color="red"></span>
+                <span className="color" primary="#29b864" color="green"></span>
+                <span className="color" primary="#ff5521" color="orange"></span>
+                <span className="color" primary="#444" color="black"></span>
               </div>
             </div>
-            <div class="size-container">
-              <h3 class="title">size</h3>
-              <div class="sizes">
-                <span class="size">7</span>
-                <span class="size">8</span>
-                <span class="size active">9</span>
-                <span class="size">10</span>
-                <span class="size">11</span>
+            <div className="size-container">
+              <h3 className="title">size</h3>
+              <div className="sizes">
+                <span className="size">7</span>
+                <span className="size">8</span>
+                <span className="size active">9</span>
+                <span className="size">10</span>
+                <span className="size">11</span>
               </div>
             </div>
-            <div class="buy-price">
-              <a href="#" class="buy">
-                <i class="fas fa-shopping-cart"></i>Add to card
+            <div className="buy-price">
+              <a href="#" className="buy">
+                <i className="fas fa-shopping-cart"></i>Add to card
               </a>
-              <div class="price">
-                <i class="fas fa-dollar-sign"></i>
+              <div className="price">
+                <i className="fas fa-dollar-sign"></i>
                 <h1>189.99</h1>
               </div>
             </div>
