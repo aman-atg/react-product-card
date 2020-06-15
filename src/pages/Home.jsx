@@ -8,15 +8,17 @@ import red from "../assets/img/red.png";
 import orange from "../assets/img/orange.png";
 
 const Home = () => {
-  var sizes, colors, shoes;
-  function changeSize() {
-    sizes.forEach(size => size.classList.remove("active"));
-    this.classList.add("active");
-  }
+  var sizes, colors, shoes, gradients;
+  var prevColor = "blue";
+
   function changeColor() {
     var primary = this.getAttribute("primary");
     var color = this.getAttribute("color");
     var shoe = document.querySelector(`.shoe[color="${color}"]`);
+    var gradient = document.querySelector(`.gradient[color="${color}"]`);
+    var prevGradient = document.querySelector(
+      `.gradient[color="${prevColor}"]`
+    );
 
     // showing correct color
     colors.forEach(color => color.classList.remove("active"));
@@ -28,16 +30,28 @@ const Home = () => {
     // showing correct img
     shoes.forEach(s => s.classList.remove("show"));
     shoe.classList.add("show");
+
+    // dealing with gradient
+    gradients.forEach(g => g.classList.remove("display", "behind"));
+    prevGradient.classList.add("behind");
+    gradient.classList.add("display");
+
+    prevColor = color;
+  }
+
+  function changeSize() {
+    sizes.forEach(size => size.classList.remove("active"));
+    this.classList.add("active");
   }
 
   useEffect(() => {
     sizes = document.querySelectorAll(".size");
     colors = document.querySelectorAll(".color");
     shoes = document.querySelectorAll(".shoe");
+    gradients = document.querySelectorAll(".gradient");
 
     colors.forEach(color => color.addEventListener("click", changeColor));
     sizes.forEach(size => size.addEventListener("click", changeSize));
-    console.log(sizes);
   }, []);
 
   return (
@@ -47,7 +61,7 @@ const Home = () => {
           <div className="shoeBackground">
             {/* Gradients */}
             <div className="gradients">
-              <div className="gradient display" color="blue"></div>
+              <div className="gradient behind" color="blue"></div>
               <div className="gradient" color="red"></div>
               <div className="gradient" color="green"></div>
               <div className="gradient" color="orange"></div>
