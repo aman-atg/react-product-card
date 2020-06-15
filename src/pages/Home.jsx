@@ -38,7 +38,12 @@ const Home = () => {
               className="shoe"
               color="orange"
             />
-            <img src={black} alt="black shoe" className="shoe" color="black" />
+            <img
+              src={black}
+              alt="black shoe"
+              className="shoe show"
+              color="black"
+            />
           </div>
 
           <div class="info">
