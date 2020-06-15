@@ -130,6 +130,97 @@ body {
   background: #fff;
   z-index: 1;
   padding: 35px 40px;
+  box-shadow: 15px 0 35px rgba(0, 0, 0, 0.1), 0 -15px 35px rgba(0, 0, 0, 0.1), 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+.info .shoename,
+.info .description,
+.info .color-container,
+.info .size-container {
+  border-bottom: 1px solid #dadada;
+}
+.info .shoeName {
+  padding: 0 0 10px 0;
+}
+.info .shoeName div {
+  display: flex;
+  align-items: center;
+}
+.info .shoeName div .big {
+  margin-right: 10px;
+  font-size: 2rem;
+  color: #333;
+  line-height: 1;
+}
+.info .shoeName div .new {
+  background: #2175f5;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 5px;
+}
+.info .shoeName .small {
+  font-weight: 500;
+  color: #444;
+  margin-top: 3px;
+  text-transform: capitalize;
+}
+.info .description {
+  padding: 10px 0;
+}
+.info .title {
+  color: #3a3a3a;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.info .text {
+  color: #555;
+  font-size: 17px;
+}
+.info .color-container {
+  padding: 10px 0;
+}
+.info .colors {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+}
+.info .color {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: 0 10px;
+  border: 5px solid;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.info .color[color=blue] {
+  background-color: #2175f5;
+  border-color: #2175f5;
+}
+.info .color[color=red] {
+  background-color: #f84848;
+  border-color: #f84848;
+}
+.info .color[color=green] {
+  background-color: #29b864;
+  border-color: #29b864;
+}
+.info .color[color=orange] {
+  background-color: #ff5521;
+  border-color: #ff5521;
+}
+.info .color[color=black] {
+  background-color: #444;
+  border-color: #444;
+}
+.info .color.active {
+  border-color: #fff;
+  box-shadow: 0 0 10px 0.5px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+.info .size-container {
+  padding: 10px 0;
 }
 
 /*# sourceMappingURL=index.css.map */
