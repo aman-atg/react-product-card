@@ -54,7 +54,7 @@ body {
 
 .gradient {
   position: absolute;
-  width: 0%;
+  width: 100%;
   height: 100%;
   left: 0;
   top: 0;
@@ -63,27 +63,27 @@ body {
 
 .gradient[color=blue] {
   background-image: linear-gradient(45deg, #0136af, #22abfa);
-  width: 100%;
+  z-index: 0;
 }
 
 .gradient[color=red] {
   background-image: linear-gradient(45deg, #d62926, #ee625f);
-  width: 100%;
+  z-index: 0;
 }
 
 .gradient[color=green] {
   background-image: linear-gradient(45deg, #11998e, #1ce669);
-  width: 100%;
+  z-index: 0;
 }
 
 .gradient[color=orange] {
   background-image: linear-gradient(45deg, #fc4a1a, #f7b733);
-  width: 100%;
+  z-index: 0;
 }
 
 .gradient[color=black] {
   background-image: linear-gradient(45deg, #111, #666);
-  width: 100%;
+  z-index: 0;
 }
 
 .logo {
@@ -230,7 +230,6 @@ body {
 }
 .info .size-container .sizes .size {
   cursor: pointer;
-  display: inline-block;
   background: #eee;
   width: 40px;
   height: 40px;
