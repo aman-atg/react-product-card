@@ -57,8 +57,8 @@ const Home = () => {
             <div className="description">
               <h3 className="title">Product Info</h3>
               <p className="text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's.
+                Ensure a comfortable running session by wearing this pair of
+                cool running shoes from Nike.
               </p>
             </div>
             <div className="color-container">
