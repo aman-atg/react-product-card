@@ -240,5 +240,66 @@ body {
   }
   .size-container {
     padding: 10px 0;
+    margin-bottom: 10px;
+    .sizes {
+      display: flex;
+      align-items: center;
+      padding: 8px 0;
+      .size {
+        cursor: pointer;
+        display: inline-block;
+        background: #eee;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        margin: 0 10px;
+        font-weight: 500;
+        font-size: 1.1rem;
+
+        &.active {
+          background: $primary;
+          color: white;
+        }
+      }
+    }
+  }
+  .buy-price {
+    display: flex;
+    padding: 15px 0;
+    justify-content: space-between;
+    align-items: center;
+    .buy {
+      padding: 0.7rem 1rem;
+      background: $primary;
+      text-decoration: none;
+      font-size: 1.1rem;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: 0.5s;
+      &:hover {
+        scale: 1.1;
+      }
+      svg {
+        margin-right: 5px;
+      }
+    }
+    .price {
+      color: #333;
+      display: flex;
+      align-items: flex-start;
+      h1 {
+        font-size: 2.1rem;
+        font-weight: 600;
+        line-height: 1;
+      }
+      svg {
+        font-size: 1.4rem;
+        margin-right: 1px;
+      }
+    }
   }
 }

@@ -221,6 +221,66 @@ body {
 }
 .info .size-container {
   padding: 10px 0;
+  margin-bottom: 10px;
+}
+.info .size-container .sizes {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+}
+.info .size-container .sizes .size {
+  cursor: pointer;
+  display: inline-block;
+  background: #eee;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  margin: 0 10px;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.info .size-container .sizes .size.active {
+  background: #2175f5;
+  color: white;
+}
+.info .buy-price {
+  display: flex;
+  padding: 15px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.info .buy-price .buy {
+  padding: 0.7rem 1rem;
+  background: #2175f5;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: 0.5s;
+}
+.info .buy-price .buy:hover {
+  scale: 1.1;
+}
+.info .buy-price .buy svg {
+  margin-right: 5px;
+}
+.info .buy-price .price {
+  color: #333;
+  display: flex;
+  align-items: flex-start;
+}
+.info .buy-price .price h1 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  line-height: 1;
+}
+.info .buy-price .price svg {
+  font-size: 1.4rem;
+  margin-right: 1px;
 }
 
 /*# sourceMappingURL=index.css.map */
