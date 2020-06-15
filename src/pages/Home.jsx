@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 
 import logo from "../assets/img/logo.png";
 import blue from "../assets/img/blue.png";
@@ -8,7 +8,7 @@ import red from "../assets/img/red.png";
 import orange from "../assets/img/orange.png";
 
 const Home = () => {
-  var sizes, colors, shoes, gradients;
+  var sizes, colors, shoes, gradients, shoeBackground, shoeHeight;
   var prevColor = "blue";
 
   function changeColor() {
@@ -44,15 +44,36 @@ const Home = () => {
     this.classList.add("active");
   }
 
+  const changeHeight = () => {
+    var x = window.matchMedia("(max-width:1000px)");
+    shoeHeight = shoes[0].offsetHeight;
+    if (x.matches) {
+      if (shoeHeight === 0) {
+        try {
+          setTimeout(changeHeight, 50);
+        } catch (error) {
+          alert("Something is Wrong!!");
+        }
+      }
+      console.log("after:", shoeHeight);
+      shoeBackground.style.height = `${shoeHeight * 0.9}px`;
+    } else {
+      shoeBackground.style.height = "475px";
+    }
+  };
+
   useEffect(() => {
     sizes = document.querySelectorAll(".size");
     colors = document.querySelectorAll(".color");
     shoes = document.querySelectorAll(".shoe");
     gradients = document.querySelectorAll(".gradient");
+    shoeBackground = document.querySelector(".shoeBackground");
 
     colors.forEach(color => color.addEventListener("click", changeColor));
     sizes.forEach(size => size.addEventListener("click", changeSize));
+    changeHeight();
   }, []);
+  window.addEventListener("resize", changeHeight);
 
   return (
     <div className="Home">
