@@ -1,5 +1,5 @@
 // IMPORTS
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 // VARIABLES
 :root {
@@ -85,6 +85,9 @@ body {
   z-index: -2;
 }
 
+.behind {
+  z-index: -1 !important;
+}
 .display {
   z-index: 0;
   animation: 1s width ease;
@@ -151,7 +154,7 @@ body {
   box-shadow: 15px 0 35px rgba(0, 0, 0, 0.1), 0 -15px 35px rgba(0, 0, 0, 0.1),
     0 15px 35px rgba(0, 0, 0, 0.1);
 
-  .shoename,
+  .shoeName,
   .description,
   .color-container,
   .size-container {

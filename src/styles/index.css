@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 :root {
   --primary: #2175f5;
 }
@@ -63,6 +63,10 @@ body {
   left: 0;
   top: 0;
   z-index: -2;
+}
+
+.behind {
+  z-index: -1 !important;
 }
 
 .display {
@@ -144,7 +148,7 @@ body {
   padding: 35px 40px;
   box-shadow: 15px 0 35px rgba(0, 0, 0, 0.1), 0 -15px 35px rgba(0, 0, 0, 0.1), 0 15px 35px rgba(0, 0, 0, 0.1);
 }
-.info .shoename,
+.info .shoeName,
 .info .description,
 .info .color-container,
 .info .size-container {
