@@ -10,8 +10,13 @@ import orange from "../assets/img/orange.png";
 const Home = () => {
   var sizes, colors, shoes, gradients, shoeBackground, shoeHeight;
   var prevColor = "blue";
+  var animateOrNot = true;
 
   function changeColor() {
+    if (!animateOrNot) {
+      console.log("waittttt");
+      return;
+    }
     var primary = this.getAttribute("primary");
     var color = this.getAttribute("color");
     var shoe = document.querySelector(`.shoe[color="${color}"]`);
@@ -36,7 +41,13 @@ const Home = () => {
     prevGradient.classList.add("behind");
     gradient.classList.add("display");
 
+    // logic
     prevColor = color;
+    animateOrNot = false;
+
+    setTimeout(() => {
+      animateOrNot = true;
+    }, 1000);
   }
 
   function changeSize() {
