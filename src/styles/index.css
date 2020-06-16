@@ -324,5 +324,92 @@ body {
     left: 5%;
   }
 }
+@media (max-width: 600px) {
+  .share {
+    width: 40px;
+    height: 40px;
+  }
+  .share svg {
+    font-size: 1rem;
+  }
+
+  .logo {
+    width: 70px;
+  }
+}
+@media (max-width: 490px) {
+  .nike {
+    font-size: 7rem;
+  }
+
+  .info {
+    padding: 20px;
+  }
+  .info .big {
+    font-size: 1.3rem !important;
+  }
+  .info .small {
+    font-size: 1rem;
+  }
+  .info .new {
+    padding: 2px 6px;
+    font-size: 0.9rem;
+  }
+  .info .title {
+    font-size: 0.9rem;
+  }
+  .info .text {
+    font-size: 0.8rem;
+  }
+  .info .buy-price .buy {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  .info .buy-price .price h1 {
+    font-size: 1.5rem;
+  }
+  .info .buy-price .price svg {
+    font-size: 0.9rem;
+  }
+  .info .color-container .colors .color {
+    margin: 0 20px;
+    width: 20px;
+    height: 20px;
+    border-width: 4px;
+  }
+  .info .size-container .sizes .size {
+    width: 30px;
+    height: 30px;
+    margin: 0 8px;
+    font-size: 0.9rem;
+    line-height: 30px;
+  }
+
+  .share {
+    width: 35px;
+    height: 35px;
+    top: 10px;
+    right: 10px;
+  }
+
+  svg {
+    font-size: 0.8rem;
+  }
+
+  .logo {
+    width: 60px;
+    top: 10px;
+    left: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .buy svg {
+    display: none;
+  }
+
+  .container {
+    padding: 20px;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */
