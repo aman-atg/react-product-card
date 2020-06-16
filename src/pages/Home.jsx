@@ -46,7 +46,8 @@ const Home = () => {
 
   const changeHeight = () => {
     var x = window.matchMedia("(max-width:1000px)");
-    shoeHeight = shoes[0].offsetHeight;
+    if (!shoes[0]) shoeHeight = 0;
+    else shoeHeight = shoes[0].offsetHeight;
     if (x.matches) {
       if (shoeHeight === 0) {
         try {
@@ -55,7 +56,6 @@ const Home = () => {
           alert("Something is Wrong!!");
         }
       }
-      console.log("after:", shoeHeight);
       shoeBackground.style.height = `${shoeHeight * 0.9}px`;
     } else {
       shoeBackground.style.height = "475px";
@@ -159,7 +159,7 @@ const Home = () => {
               </a>
               <div className="price">
                 <i className="fas fa-dollar-sign"></i>
-                <h1>189.99</h1>
+                <h1>149.99</h1>
               </div>
             </div>
           </div>
