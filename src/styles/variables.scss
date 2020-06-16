@@ -1,0 +1,13 @@
+$blue-gradient: linear-gradient(45deg, #0136af, #22abfa);
+$red-gradient: linear-gradient(45deg, #d62926, #ee625f);
+$green-gradient: linear-gradient(45deg, #11998e, #1ce669);
+$orange-gradient: linear-gradient(45deg, #fc4a1a, #f7b733);
+$black-gradient: linear-gradient(45deg, #111, #666);
+
+$gradientBgs: (
+  "blue": $blue-gradient,
+  "red": $red-gradient,
+  "green": $green-gradient,
+  "orange": $orange-gradient,
+  "black": $black-gradient,
+);
