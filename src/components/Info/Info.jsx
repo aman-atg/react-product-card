@@ -49,7 +49,7 @@ const Info = () => {
 
   const BuySection = (
     <div className="buy-price">
-      <a href="#" className="buy">
+      <a href="/#" className="buy">
         <i className="fas fa-shopping-cart"></i>Add to card
       </a>
       <div className="price">
