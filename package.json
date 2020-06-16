@@ -6,19 +6,9 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "concurrently": "^5.1.0",
-    "gsap": "^3.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-redux": "^7.2.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1",
-    "react-transition-group": "^4.4.1",
-    "redux": "^4.0.5",
-    "redux-logger": "^3.0.6",
-    "redux-persist": "^6.0.0",
-    "redux-thunk": "^2.3.0",
-    "reselect": "^4.0.0"
+    "react-scripts": "3.4.1"
   },
   "scripts": {
     "dev": "concurrently \"npm start\" \"cd src/styles && sass --watch index.scss:index.css\" ",
@@ -42,19 +32,16 @@
       "last 1 safari version"
     ]
   },
-  "description": "- ITCSS - REDUX + THUNK - REACT-ROUTER-DOM - SERVICE-WORKER - THEMING - CLI SUPPORT TO CREATE XYZ - ANIMATION (GSAP)",
-  "main": "index.js",
-  "devDependencies": {},
+  "description": "React Product Card",
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  },
   "keywords": [
     "react",
     "scss",
-    "boilerplate",
     "animation",
-    "react-router-dom",
-    "redux",
-    "thunk",
-    "react-redux"
+    "card"
   ],
   "author": "Aman Ansari",
-  "license": "UNLICENSED"
+  "license": "MIT"
 }
