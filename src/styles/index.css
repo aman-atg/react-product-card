@@ -278,7 +278,7 @@ body {
   transition: 0.5s;
 }
 .info .buy-price .buy:hover {
-  scale: 1.1;
+  transform: scale(1.1);
 }
 .info .buy-price .buy svg {
   margin-right: 5px;
@@ -408,7 +408,23 @@ body {
   }
 
   .container {
-    padding: 20px;
+    padding: 10px;
+  }
+}
+@media (max-width: 340px) {
+  .info .color-container .colors {
+    display: flex;
+    justify-content: space-around;
+  }
+  .info .color-container .colors .color {
+    margin: 0;
+  }
+  .info .size-container .sizes {
+    display: flex;
+    justify-content: space-around;
+  }
+  .info .size-container .sizes .size {
+    margin: 0;
   }
 }
 

@@ -294,7 +294,7 @@ body {
       font-weight: 500;
       transition: 0.5s;
       &:hover {
-        scale: 1.1;
+        transform: scale(1.1);
       }
       svg {
         margin-right: 5px;
@@ -443,8 +443,29 @@ body {
   .buy svg {
     display: none;
   }
-
   .container {
-    padding: 20px;
+    padding: 10px;
+  }
+}
+@media (max-width: 340px) {
+  .info {
+    .color-container {
+      .colors {
+        display: flex;
+        justify-content: space-around;
+        .color {
+          margin: 0;
+        }
+      }
+    }
+    .size-container {
+      .sizes {
+        display: flex;
+        justify-content: space-around;
+        .size {
+          margin: 0;
+        }
+      }
+    }
   }
 }
