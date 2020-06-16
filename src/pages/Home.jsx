@@ -46,7 +46,7 @@ const Home = () => {
     // hack
     setTimeout(() => {
       animateOrNot = true;
-    }, 1000);
+    }, 800);
   }
 
   function changeSize() {
