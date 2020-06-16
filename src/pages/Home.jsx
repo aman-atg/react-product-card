@@ -1,11 +1,8 @@
 import React, { useEffect } from "react";
+import Gradients from "../components/Gradients";
+import ProductImages from "../components/ProductImages";
 
 import logo from "../assets/img/logo.png";
-import blue from "../assets/img/blue.png";
-import black from "../assets/img/black.png";
-import green from "../assets/img/green.png";
-import red from "../assets/img/red.png";
-import orange from "../assets/img/orange.png";
 
 const Home = () => {
   var sizes, colors, shoes, gradients, shoeBackground, shoeHeight;
@@ -91,38 +88,15 @@ const Home = () => {
       <div className="container">
         <div className="card">
           <div className="shoeBackground">
-            {/* Gradients */}
-            <div className="gradients">
-              <div className="gradient behind" color="blue"></div>
-              <div className="gradient" color="red"></div>
-              <div className="gradient" color="green"></div>
-              <div className="gradient" color="orange"></div>
-              <div className="gradient" color="black"></div>
-            </div>
+            <Gradients />
 
             <h1 className="nike">nike</h1>
             <img src={logo} alt="logo" className="logo" />
-
             <a href="#" className="share">
               <i className="fas fa-share-alt"></i>
             </a>
 
-            {/* Product Images */}
-            <img
-              src={blue}
-              alt="blue shoe"
-              className="shoe show"
-              color="blue"
-            />
-            <img src={red} alt="red shoe" className="shoe" color="red" />
-            <img src={green} alt="green shoe" className="shoe" color="green" />
-            <img
-              src={orange}
-              alt="orange shoe"
-              className="shoe"
-              color="orange"
-            />
-            <img src={black} alt="black shoe" className="shoe " color="black" />
+            <ProductImages />
           </div>
 
           <div className="info">
