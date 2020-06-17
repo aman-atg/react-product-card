@@ -11,3 +11,28 @@ $gradientBgs: (
   "orange": $orange-gradient,
   "black": $black-gradient,
 );
+
+$box-shadow1: 15px 0 35px rgba(0, 0, 0, 0.1), 0 -15px 35px rgba(0, 0, 0, 0.1),
+  0 15px 35px rgba(0, 0, 0, 0.1);
+
+$box-shadow2: -15px 0 35px rgba(0, 0, 0, 0.1), 0 -15px 35px rgba(0, 0, 0, 0.1),
+  0 15px 35px rgba(0, 0, 0, 0.1);
+
+$box-shadow3: 0 0 10px 0.5px rgba(0, 0, 0, 0.2);
+
+// Mixins
+
+@mixin flex-centered($a: 1, $j: 1) {
+  display: flex;
+  @if ($a==1) {
+    align-items: center;
+  }
+  @if ($j==1) {
+    justify-content: center;
+  }
+}
+
+// Working as an alias for flex-centered
+@mixin fc($a: 1, $b: 1) {
+  @include flex-centered($a, $b);
+}
