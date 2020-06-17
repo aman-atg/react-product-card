@@ -1,7 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
+  "short_name": "Product Card",
+  "name": "React Product Card",
+  "icons": [ 
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
