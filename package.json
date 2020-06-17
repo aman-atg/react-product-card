@@ -14,7 +14,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "postbuild": "find /path/to/build/static -type f \\( -name \\*.js -o -name \\*.css \\) -exec gzip {} \\; -exec mv {}.gz {} \\;"
+    "postbuild": "find build/static -type f \\( -name \\*.js -o -name \\*.css \\) -exec gzip {} \\; -exec mv {}.gz {} \\;"
   },
   "eslintConfig": {
     "extends": "react-app"
