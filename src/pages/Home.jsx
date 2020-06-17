@@ -57,10 +57,9 @@ const Home = () => {
   // for responsive behaviour
   const changeHeight = () => {
     var x = window.matchMedia("(max-width:1000px)");
-    if (!shoes) {
-      shoeHeight = 0;
-      console.log("f");
-    } else shoeHeight = shoes[0].offsetHeight;
+
+    !shoes ? (shoeHeight = 0) : (shoeHeight = shoes[0].offsetHeight);
+
     if (x.matches) {
       if (shoeHeight === 0) {
         try {
@@ -70,6 +69,9 @@ const Home = () => {
         }
       }
       shoeBackground.style.height = `${shoeHeight * 0.9}px`;
+    } else if (!!shoeBackground) {
+      // go back to default
+      shoeBackground.style.height = "475px";
     }
   };
 
