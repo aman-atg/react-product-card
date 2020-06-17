@@ -3,6 +3,7 @@
 Animated Product Card with the help of React and SCSS (Highly Responsive)
 
 - Go Test Here : [Site](https://react-product-card.now.sh/)
+- After 1st visit you can turn off your data conn. and reload the page it should work just fine.
 
 ![preview](preview.gif)
 
