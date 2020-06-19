@@ -9,7 +9,7 @@ Animated Product Card with the help of React and SCSS (Highly Responsive)
 
 ## Prerequisites
 
-- A modern-web browser like Brave , Chrome , Firefox etc
+- A modern web browser like Brave , Chrome , Firefox etc
 - Node
 
 ## Getting Started

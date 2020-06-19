@@ -5,6 +5,9 @@
 }
 
 @media (max-width: 1000px) {
+  .github-fork-ribbon {
+    display: none;
+  }
   .card {
     flex-direction: column;
     width: 100%;
