@@ -1,6 +1,21 @@
 @media (max-width: 1070px) {
   .shoe {
+    width: 100%;
+  }
+  .shoe-7 {
+    width: 125%;
+  }
+  .shoe-8 {
+    width: 130%;
+  }
+  .shoe-9 {
     width: 135%;
+  }
+  .shoe-10 {
+    width: 140%;
+  }
+  .shoe-11 {
+    width: 145%;
   }
 }
 
@@ -18,11 +33,27 @@
     }
 
     .shoe {
-      width: 100%;
       transform: rotate(-5deg) translateY(-50%);
       top: 55%;
       right: 2%;
     }
+
+    .shoe-7 {
+      width: 90%;
+    }
+    .shoe-8 {
+      width: 95%;
+    }
+    .shoe-9 {
+      width: 100%;
+    }
+    .shoe-10 {
+      width: 105%;
+    }
+    .shoe-11 {
+      width: 110%;
+    }
+
     .nike {
       top: 20%;
       left: 5%;
@@ -30,7 +61,16 @@
   }
 }
 
+@media (max-width: 700px) {
+  .shoeBackground {
+    height: 350px;
+  }
+}
+
 @media (max-width: 600px) {
+  .shoeBackground {
+    height: 300px;
+  }
   .share {
     width: 40px;
     height: 40px;
@@ -44,6 +84,9 @@
 }
 
 @media (max-width: 490px) {
+  .shoeBackground {
+    height: 250px;
+  }
   .card {
     .nike {
       font-size: 7rem;
@@ -125,6 +168,9 @@
 }
 
 @media (max-width: 400px) {
+  .shoeBackground {
+    height: 200px;
+  }
   .buy svg {
     display: none;
   }
@@ -133,6 +179,9 @@
   }
 }
 @media (max-width: 340px) {
+  .shoeBackground {
+    height: 180px;
+  }
   .info {
     .color-container {
       .colors {
@@ -152,5 +201,20 @@
         }
       }
     }
+  }
+}
+@media (max-width: 290px) {
+  .shoeBackground {
+    height: 150px;
+  }
+}
+@media (max-width: 200px) {
+  .shoeBackground {
+    height: 100px;
+  }
+}
+@media (max-width: 150px) {
+  .shoeBackground {
+    height: 80px;
   }
 }

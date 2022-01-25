@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import Gradients from "../components/Gradients";
 import ProductImages from "../components/ProductImages";
 import Info from "../components/Info/Info";
@@ -10,6 +10,9 @@ const Home = () => {
   var prevColor = "blue";
   var animateOrNot = true;
 
+  const [shoeSize,setShoeSize] = useState(9)
+  const [shoeColor,setShoeColor] = useState('blue')
+
   function changeColor() {
     if (!animateOrNot) {
       console.log("waittttt");
@@ -17,13 +20,14 @@ const Home = () => {
     }
     var primary = this.getAttribute("primary");
     var color = this.getAttribute("color");
-    var shoe = document.querySelector(`.shoe[color="${color}"]`);
+    //var shoe = document.querySelector(`.shoe[color="${color}"]`);
     var gradient = document.querySelector(`.gradient[color="${color}"]`);
     var prevGradient = document.querySelector(
       `.gradient[color="${prevColor}"]`
     );
 
     // showing correct color
+    setShoeColor(color);
     colors.forEach(color => color.classList.remove("active"));
     this.classList.add("active");
 
@@ -31,8 +35,8 @@ const Home = () => {
     document.documentElement.style.setProperty("--primary", primary);
 
     // showing correct img
-    shoes.forEach(s => s.classList.remove("show"));
-    shoe.classList.add("show");
+    // shoes.forEach(s => s.classList.remove("show"));
+    // shoe.classList.add("show");
 
     // dealing with gradient
     gradients.forEach(g => g.classList.remove("display", "behind"));
@@ -50,30 +54,31 @@ const Home = () => {
   }
 
   function changeSize() {
+    setShoeSize(this.innerHTML);
     sizes.forEach(size => size.classList.remove("active"));
     this.classList.add("active");
   }
 
   // for responsive behaviour
-  const changeHeight = () => {
-    var x = window.matchMedia("(max-width:1000px)");
+  // const changeHeight = () => {
+  //   var x = window.matchMedia("(max-width:1000px)");
+  //   !shoes ? (shoeHeight = 0) : (shoeHeight = shoes[0].offsetHeight);
+  //   console.log(shoes[0].offsetHeight);
 
-    !shoes ? (shoeHeight = 0) : (shoeHeight = shoes[0].offsetHeight);
-
-    if (x.matches) {
-      if (shoeHeight === 0) {
-        try {
-          setTimeout(changeHeight, 50);
-        } catch (error) {
-          alert("Something is Wrong!!");
-        }
-      }
-      shoeBackground.style.height = `${shoeHeight * 0.9}px`;
-    } else if (!!shoeBackground) {
-      // go back to default
-      shoeBackground.style.height = "475px";
-    }
-  };
+  //   if (x.matches) {
+  //     if (shoeHeight === 0) {
+  //       try {
+  //         setTimeout(changeHeight, 50);
+  //       } catch (error) {
+  //         alert("Something is Wrong!!");
+  //       }
+  //     }
+  //     shoeBackground.style.height = `${shoeHeight * 0.9}px`;
+  //   } else if (!shoeBackground) {
+  //   //      go back to default
+  //     shoeBackground.style.height = "475px";
+  //   }
+  // };
 
   useEffect(() => {
     sizes = document.querySelectorAll(".size");
@@ -84,9 +89,9 @@ const Home = () => {
 
     colors.forEach(color => color.addEventListener("click", changeColor));
     sizes.forEach(size => size.addEventListener("click", changeSize));
-    changeHeight();
+    //changeHeight();
   }, []);
-  window.addEventListener("resize", changeHeight);
+  //window.addEventListener("resize", changeHeight);
 
   return (
     <div className="Home">
@@ -101,7 +106,7 @@ const Home = () => {
               <i className="fas fa-share-alt"></i>
             </a>
 
-            <ProductImages />
+            <ProductImages shoeSize={shoeSize} shoeColor={shoeColor}/>
           </div>
           <Info />
         </div>
